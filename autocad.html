@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AutoCAD OEM</title>
+	<link rel="stylesheet" type="text/css" href="autocad.css">
+</head>
+<body>
+  <div>
+  	<nav id="navbar">
+  		<header>AutoCAD OEM</header>
+  		<ul>
+  			<li><a class="nav-link" href="#What_is_AutoCAD_OEM?">What is AutoCAD OEM?</a></li>
+  			<li><a class="nav-link" href="#The_AutoCAD_OEM_Make_Wizard">The AutoCAD OEM Make Wizard</a></li>
+  			<li><a class="nav-link" href="#Specifying_Your_Own_Project_Information">Specifying Your Own Project Information</a></li>
+  			<li><a class="nav-link" href="#Enabling_Commands_and_System_Variables">Enabling Commands and System Variables</a></li>
+  			<li><a class="nav-link" href="#Specifying_Your_Own_Modules">Specifying Your Own Modules</a></li>
+  			<li><a class="nav-link" href="#Controlling_Your_Toolbar_and_Status_Bar">Controlling Your Toolbar and Status Bar</a></li>
+  			<li><a class="nav-link" href="#Specifying_AutoCAD_OEM_Features">Specifying AutoCAD OEM Features</a></li>
+  		</ul>
+  	</nav>
+  </div>
+
+
+  <main id="main-doc">
+  <header>AutoCAD OEM Technical Documentation</header>
+  <h1>AutoCAD OEM</h1>
+  <p>AutoCAD OEM is a high-level CAD platform that can be used as the foundation for you to easily develop and deliver products using a wide variety of ready-made CAD functions tailored to your end users’ specific needs. AutoCAD OEM is based on AutoCAD® and provides true DWG file compatibility.</p>
+  <p>Find out more below:</p>
+
+
+
+  <section class="main-section" id="What_is_AutoCAD_OEM?">
+  	<header>What is AutoCAD OEM?</header>
+  	  <p>AutoCAD OEM has almost the same feature set as AutoCAD. As a licensed AutoCAD OEM developer, you choose how much access end users have to the AutoCAD feature set and customization features. You choose the commands and features you will support. AutoCAD OEM products can use any AutoCAD functionality internally, while limiting CAD functionality supplied to end users. This architecture provides security for your product and the data your product creates and edits.</p>
+      <p>All AutoCAD OEM products begin as AutoCAD plugins. The My First Plugin Training Guide provides information on creating plugins.</p>
+      <p>You create custom products by using AutoCAD OEM to do the following:</p>
+      <p>Expose only the AutoCAD functionality necessary to your particular products by customizing your products’ user interfaces</p>
+      <p>Create new functionality with ObjectARX®, ObjectDBX™ , Visual LISP®, Visual Basic® for Applications (VBA), ActiveX® Automation, and ObjectARX managed class APIs</p>
+      <p>The following diagram illustrates the various levels of access in an AutoCAD OEM product.</p>
+  </section>
+  
+
+
+  <section class="main-section" id="The_AutoCAD_OEM_Make_Wizard">
+  	<header>The AutoCAD OEM Make Wizard</header>
+  	  <P>AutoCAD OEM includes a ‘Make Wizard’, which is a useful tool you can use to very simply build and customize your product. The wizard automates project setup, registration, and AutoCAD OEM resource configuration based on the information you provide. It also guarantees that your product is built with the correct name and includes the required files.</P>
+  	  <p>The wizard does most of the work of building your finished product so that you can devote more time to developing value-added functionality.</p>
+  	  <p>Using the AutoCAD OEM Make Wizard, you can</p>
+  	    <ul>
+  	      <li>Manage multiple products and their associated files</li>
+  	      <li>Stamp your product with an identity</li>
+  	      <li>Stamp only those AutoCAD OEM files necessary for your product</li>
+  	      <li>Visually select the commands and AutoCAD system variables that are supported</li>
+  	      <li>Add your modules to your product, such as ObjectARX, ObjectDBX, VBA, COM, AutoLISP, and managed application modules</li>
+  	      <li>Specify the custom commands, logical application names, and load controls numbers that apply to your modules</li>
+  	      <li>Edit user interface resources, including the splash screen, the About box, and the Back Screen</li>
+  	      <li>Edit user interface resources specific to AutoCAD, including the status bar, common toolbar properties, Options and Startup dialog boxes, and file type support</li>
+  	      <li>Customize the program, drawing, and other icons that are displayed in your product</li>
+  	      <li>Build resource files</li>
+  	      <li>Perform binding operations</li>
+  	      <li>Build the entire product and run tree from a single page of the wizard</li>
+  	      <li>Register your product to facilitate testing</li>
+  	    </ul>
+  	  <p>Outside the AutoCAD OEM Make Wizard, you can</p>
+
+  	    <ul>
+  	    	<li>Edit resources not managed by the wizard, including toolbar icons</li>
+  	    	<li>Create your menu</li>
+  	    	<li>Create AutoLISP modules</li>
+  	    	<li>Create VBA macros</li>
+  	    	<li>Create and build ObjectARX, ObjectDBX, and managed application modules</li>
+  	    	<li>Create your product installer</li>
+   	    </ul>
+
+   	  <p>As an AutoCAD OEM developer, you provide the name of your product and program. For example, the program name could be <em>cadd.exe.</em></p>
+   	  <p>The wizard uses both the information you provide and the AutoCAD OEM engine files to create a directory containing all necessary files. The directory includes an executable whose name is based on the program name you enter in the wizard. The executable is the basis for your AutoCAD OEM product. The wizard “stamps” your product files by providing an identity to the necessary AutoCAD OEM engine files.</p>
+   	  <p>The AutoCAD OEM Make Wizard saves a configuration file when you create your product. This file is named <em><program name>.xml</em> and is located in the <em>projects\<program name> folder.</em> The OEMInstallerWizard uses this file to find the name of your product, the name of your company, and other information.</p>        
+  </section>
+
+
+
+  <section class="main-section" id="Specifying_Your_Own_Project_Information">
+  	<header>Specifying Your Own Project Information</header>
+  	  <p>Using the AutoCad OEM Make Wizzard, you can use the Project Information page to specify identifying information for your product. The wizard uses the values you enter to provide your product’s identity to the necessary AutoCAD OEM engine files.</p>
+  	  <p>Note After all the text boxes on the Project Information page are filled in, the Table of Contents for the wizard is available. The Table of Contents lists the titles of the wizard pages; you can use the titles to navigate without using the Back and Next buttons.</p>
+
+  	  <img src="http://23nhb7tft961f8ectvtl0g3i.wpengine.netdna-cdn.com/wp-content/uploads/2014/12/AutoCAD_OEM_3_1_Project-Information.jpg">
+  </section>
+
+
+
+  <section class="main-section" id="Enabling_Commands_and_System_Variables">
+  	<header>Enabling Commands and System Variables</header>
+  	  <p>With the Commands table on the AutoCAD OEM Make Wizzard Commands page, you can enable built-in commands and system variables.</p>
+  	  <p>The table lists the global command names for built-in commands, with each command preceded by an underscore. The table also lists system variables, which are not preceded by an underscore.</p>
+
+  	  <img src="http://23nhb7tft961f8ectvtl0g3i.wpengine.netdna-cdn.com/wp-content/uploads/2014/12/AutoCAD_OEM_4_1_AttoCAD-Commands.jpg">
+
+  	  <p>You can give commands and system variables varying levels of support in your product:</p>
+
+  	  <ul>
+  	  	<li><em>None.</em> Your product does not support the command or system variable.</li>
+  	  	<li><em>Internal Use.</em> Your product can use the command or system variable, but the command or system variable is not exposed to menus, toolbars, and end users.</li>
+  	  	<li><em>Full.</em> Your product can expose the command or system variable to end users through the command line, a menu, or a toolbar.</li>
+  	  	<li><em>Redefine.</em> You enable a command and then redefine it in your product. You can redefine only those commands that can be undefined with the AutoCAD UNDEFINE command.</li>  	  	
+  	  </ul>
+
+  	  <p>To change the default level of support for a command or system variable, select it from the AutoCAD OEM Commands page and select an option in the Support Options area of the page.</p>
+  </section>
+
+
+
+  <section class="main-section" id="Specifying_Your_Own_Modules">
+  	<header>Specifying Your Own Modules</header>
+  	  <p>On the Your Modules page of the AutoCad OEM Make Wizard, you can specify applications and other support files that you want to include in your AutoCAD OEM product. The files and settings you specify are displayed in the table.</p>
+
+  	  <img src="http://23nhb7tft961f8ectvtl0g3i.wpengine.netdna-cdn.com/wp-content/uploads/2014/12/AutoCAD_OEM_5_1_Your-Modules.jpg">
+
+  	  <p>Using the Add Module button, you add your application and support files to your product. After you select a module, its file name and location are displayed in the list, and the Build With and Build Destination options become available. The Remove Module button deletes modules from the list. To edit a module file or its location, double-click the field. You may also use environement variables within the location field.</p>
+  	  <p>After you add a module, you can select a bind option or a copy option from the Build With list. Bind options are available for all supported file types. If you select a bind option for a file, the wizard stamps the module.</p>
+  	  <p>If you select the CopyFile option in the Build With list, the wizard does not stamp the module. Instead, the wizard copies the file to the location you provide in the Build Destination area of the Your Modules page. The CopyFile option is useful for support files such as fonts and sample drawings, as well as for DLL files that are not linked with AutoCAD OEM libraries and thus do not require binding</p>
+  	  <p>After a file has been built into your product, the wizard binds or copies it only if the file has been modified since a previous build. This optimization reduces processing time and helps streamline the debugging process. Note that all files are rebuilt if the “Build All” option is selected.</p>
+
+  	<header>Specifying Settings for Your Module</header>
+  	  <p>On the Your Module Settings page, you can use the table to enter the names of the custom commands provided by the modules on the Your Modules page. Specifically, enter custom command names defined in your ObjectARX, AutoLISP, VBA, and managed application modules.</p>
+  	  <p>You can enter new commands, delete existing commands, or import a command list from an external file. You can also enable your custom defined setvars in this page. To do this you should add the setvar name to the default application. When you build your project using the AutoCAD OEM Make Wizard, your ObjectARX applications and object enablers are registered with the appropriate settings, including application name, ObjectARX commands, and load controls.</p>
+
+  	  <img src="http://23nhb7tft961f8ectvtl0g3i.wpengine.netdna-cdn.com/wp-content/uploads/2014/12/AutoCAD_OEM_5_2_Your-Module-Settings.jpg">
+
+  	  <p>The applications you added on the Your Modules page are displayed in the Application column. If an ObjectARX or other application defines commands, you must add the command names in the Your Commands field for that application. The wizard configures your product to include the specified commands. You must list global and local command names for commands defined in ObjectARX applications. For ObjectARX, object enablers, and managed applications, you must also enter a logical application name and a load controls number to be specified in the registry. The logical application name should match the name that the application uses if it registers itself.</p>
+  	  <p>Built-in AutoCAD OEM commands are on a different page in the wizard from your custom commands. This is especially helpful during maintenance. Separate pages prevent confusion between built-in commands that cannot be modified, and custom commands that can.</p>
+  	  <p>All custom commands that you specify are available for use at the command line of your product and for inclusion in your menu and toolbars.</p>
+
+  	  <p>For custom commands defined in ObjectARX modules, you should</p>
+  	  <ul>
+  	  	<li>Always specify both the global and local command names on the Your Module Settings page.</li>
+  	  	<li>Always precede the global command name with an underscore.</li>
+  	  	<li>Separate the global and local name with a semicolon.</li>
+  	  </ul>
+
+  	  <p>AutoCAD OEM allows up to 1500 commands, including supported built-in commands.</p>  
+  </section>
+
+
+
+  <section class="main-section" id="Controlling_Your_Toolbar_and_Status_Bar">
+  	<header>Controlling Your Toolbar and Status Bar</header>
+  	  <p>On the Toolbar and Status Bar page of the AutoCad OEM Make Wizzard, you can set attributes for controls on toolbars. It is also possible to remove the controls entirely from the CUI command list. Click the plus sign next to each item that you want to change.</p>
+  	  <p>You can use this page to turn the Z coordinates display on or off for your status bar, which is useful if your product is a 2D tool. To customize your status bar panes for attributes such as tooltips and visibility, you use an application programming interface.</p>
+
+  	  <p>You can also control the following:</p>
+  	  <ul>
+  	  	<li>Turn On/Off toolbars, removing the control from the CUI command list</li>
+  	  	<li>Widths and tooltips for AutoCAD toolbar components</li>
+  	  	<li>The value of the ISAVEPERCENT system variable</li>
+  	  	<li>The default Internet address shown on the Files tab of the Options dialog box</li>
+  	  	<li>Specify the level of support on operating systems running simplified Chinese.</li>
+  	  </ul>
+
+  	  <img src="http://23nhb7tft961f8ectvtl0g3i.wpengine.netdna-cdn.com/wp-content/uploads/2014/12/AutoCAD_OEM_6_1_Toolbar-Staus-Bar.jpg">
+
+  	  <p>Tooltip text determines the string displayed in the Windows tooltip when the user’s cursor hovers over the control. If you assign an empty string, no tooltip is displayed.</p>
+  </section>
+
+
+
+  <section class="main-section" id="Specifying_AutoCAD_OEM_Features">
+  	<header>AutoCAD OEM Features</header>
+  	<p>On the AutoCAD OEM Features page of the AutoCAd OEM Make Wizard you select the features that your product supports. Many features in the table are part of the Options dialog box.</p>
+  	<p>In the Description column, features are described. If you decide to support a feature in your product, select the feature and, under Support Options, select On.</p>
+  	<p>If you decide not to support a feature in your product, select the feature and, under Support Options, select Off.</p>
+
+  	<img src="http://23nhb7tft961f8ectvtl0g3i.wpengine.netdna-cdn.com/wp-content/uploads/2014/12/AutoCAD_OEM_7_1_Features.jpg">
+
+  </section>
+</main>
+</body>
+</html>
